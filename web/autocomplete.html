@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$.get("data.txt").done(function(data){
+			$("#txtbox").autocomplete({
+				source : data.split("\n")
+			});
+		});
+	</script>
+</head>
+<body>
+<input type="text" id="txtbox">
+</body>
+</html>
